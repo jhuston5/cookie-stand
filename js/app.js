@@ -13,24 +13,27 @@ let seattle = {
   //create an empty array that will house the random numbers
   avgCookiesSoldEachHourArray: [],
   dailyTotal: 0,
+
   getRandomCustomers: function() {
+    return Math.ceil(Math.random() * (this.max - this.min + 1) + this.min);
+  },
+  cookiesPurchased: function() {
+    return Math.ceil(this.getRandomCustomers()*this.avg);
+  },
+  displayCookies: function() {
     let ul = document.getElementById('seattleStore');
     let h3 = document.createElement('h3');
     h3.textContent = `${this.name}`;
     ul.appendChild(h3);
-    //create a for loop that will iterate the amount of hours the store is open
     for (let i = 0; i < hour.length; i++) {
-    //use random number variable to store Math.random results
-      let randomNumber = Math.ceil(Math.random() * (this.max - this.min + 1) + this.min);
-      //Push the random number to the empty array holding the average cookies
-      this.avgCookiesSoldEachHourArray.push(randomNumber);
+      let avgCookie = this.cookiesPurchased();
+      this.avgCookiesSoldEachHourArray.push(avgCookie);
       this.dailyTotal = this.dailyTotal+this.avgCookiesSoldEachHourArray[i];
       let li = document.createElement('li');
       //Use the DOM to create the list
       li.textContent = `${hour[i]}: ${this.avgCookiesSoldEachHourArray[i]}`;
       ul.appendChild(li);
     }
-    // return this.avgCookiesSoldEachHourArray;
     let li = document.createElement('li');
     li.textContent = `Total: ${this.dailyTotal}`;
     ul.appendChild(li);
@@ -38,9 +41,7 @@ let seattle = {
   }
 };
 
-seattle.getRandomCustomers();
-
-
+seattle.displayCookies();
 
 
 let tokyo = {
@@ -52,23 +53,25 @@ let tokyo = {
   avgCookiesSoldEachHourArray: [],
   dailyTotal: 0,
   getRandomCustomers: function() {
+    return Math.ceil(Math.random() * (this.max - this.min + 1) + this.min);
+  },
+  cookiesPurchased: function() {
+    return Math.ceil(this.getRandomCustomers()*this.avg);
+  },
+  displayCookies: function() {
     let ul = document.getElementById('tokyoStore');
     let h3 = document.createElement('h3');
     h3.textContent = `${this.name}`;
     ul.appendChild(h3);
-    //create a for loop that will iterate the amount of hours the store is open
     for (let i = 0; i < hour.length; i++) {
-    //use random number variable to store Math.random results
-      let randomNumber = Math.ceil(Math.random() * (this.max - this.min + 1) + this.min);
-      //Push the random number to the empty array holding the average cookies
-      this.avgCookiesSoldEachHourArray.push(randomNumber);
+      let avgCookie = this.cookiesPurchased();
+      this.avgCookiesSoldEachHourArray.push(avgCookie);
       this.dailyTotal = this.dailyTotal+this.avgCookiesSoldEachHourArray[i];
       let li = document.createElement('li');
       //Use the DOM to create the list
       li.textContent = `${hour[i]}: ${this.avgCookiesSoldEachHourArray[i]}`;
       ul.appendChild(li);
     }
-    // return this.avgCookiesSoldEachHourArray;
     let li = document.createElement('li');
     li.textContent = `Total: ${this.dailyTotal}`;
     ul.appendChild(li);
@@ -76,7 +79,7 @@ let tokyo = {
   }
 };
 
-tokyo.getRandomCustomers();
+tokyo.displayCookies();
 
 
 let dubai = {
@@ -88,23 +91,25 @@ let dubai = {
   avgCookiesSoldEachHourArray: [],
   dailyTotal: 0,
   getRandomCustomers: function() {
+    return Math.ceil(Math.random() * (this.max - this.min + 1) + this.min);
+  },
+  cookiesPurchased: function() {
+    return Math.ceil(this.getRandomCustomers()*this.avg);
+  },
+  displayCookies: function() {
     let ul = document.getElementById('dubaiStore');
     let h3 = document.createElement('h3');
     h3.textContent = `${this.name}`;
     ul.appendChild(h3);
-    //create a for loop that will iterate the amount of hours the store is open
     for (let i = 0; i < hour.length; i++) {
-    //use random number variable to store Math.random results
-      let randomNumber = Math.ceil(Math.random() * (this.max - this.min + 1) + this.min);
-      //Push the random number to the empty array holding the average cookies
-      this.avgCookiesSoldEachHourArray.push(randomNumber);
+      let avgCookie = this.cookiesPurchased();
+      this.avgCookiesSoldEachHourArray.push(avgCookie);
       this.dailyTotal = this.dailyTotal+this.avgCookiesSoldEachHourArray[i];
       let li = document.createElement('li');
       //Use the DOM to create the list
       li.textContent = `${hour[i]}: ${this.avgCookiesSoldEachHourArray[i]}`;
       ul.appendChild(li);
     }
-    // return this.avgCookiesSoldEachHourArray;
     let li = document.createElement('li');
     li.textContent = `Total: ${this.dailyTotal}`;
     ul.appendChild(li);
@@ -112,7 +117,7 @@ let dubai = {
   }
 };
 
-dubai.getRandomCustomers();
+dubai.displayCookies();
 
 
 let paris = {
@@ -124,23 +129,25 @@ let paris = {
   avgCookiesSoldEachHourArray: [],
   dailyTotal: 0,
   getRandomCustomers: function() {
+    return Math.ceil(Math.random() * (this.max - this.min + 1) + this.min);
+  },
+  cookiesPurchased: function() {
+    return Math.ceil(this.getRandomCustomers()*this.avg);
+  },
+  displayCookies: function() {
     let ul = document.getElementById('parisStore');
     let h3 = document.createElement('h3');
     h3.textContent = `${this.name}`;
     ul.appendChild(h3);
-    //create a for loop that will iterate the amount of hours the store is open
     for (let i = 0; i < hour.length; i++) {
-    //use random number variable to store Math.random results
-      let randomNumber = Math.ceil(Math.random() * (this.max - this.min + 1) + this.min);
-      //Push the random number to the empty array holding the average cookies
-      this.avgCookiesSoldEachHourArray.push(randomNumber);
+      let avgCookie = this.cookiesPurchased();
+      this.avgCookiesSoldEachHourArray.push(avgCookie);
       this.dailyTotal = this.dailyTotal+this.avgCookiesSoldEachHourArray[i];
       let li = document.createElement('li');
       //Use the DOM to create the list
       li.textContent = `${hour[i]}: ${this.avgCookiesSoldEachHourArray[i]}`;
       ul.appendChild(li);
     }
-    // return this.avgCookiesSoldEachHourArray;
     let li = document.createElement('li');
     li.textContent = `Total: ${this.dailyTotal}`;
     ul.appendChild(li);
@@ -148,7 +155,7 @@ let paris = {
   }
 };
 
-paris.getRandomCustomers();
+paris.displayCookies();
 
 
 let lima = {
@@ -160,23 +167,25 @@ let lima = {
   avgCookiesSoldEachHourArray: [],
   dailyTotal: 0,
   getRandomCustomers: function() {
+    return Math.ceil(Math.random() * (this.max - this.min + 1) + this.min);
+  },
+  cookiesPurchased: function() {
+    return Math.ceil(this.getRandomCustomers()*this.avg);
+  },
+  displayCookies: function() {
     let ul = document.getElementById('limaStore');
     let h3 = document.createElement('h3');
     h3.textContent = `${this.name}`;
     ul.appendChild(h3);
-    //create a for loop that will iterate the amount of hours the store is open
     for (let i = 0; i < hour.length; i++) {
-    //use random number variable to store Math.random results
-      let randomNumber = Math.ceil(Math.random() * (this.max - this.min + 1) + this.min);
-      //Push the random number to the empty array holding the average cookies
-      this.avgCookiesSoldEachHourArray.push(randomNumber);
+      let avgCookie = this.cookiesPurchased();
+      this.avgCookiesSoldEachHourArray.push(avgCookie);
       this.dailyTotal = this.dailyTotal+this.avgCookiesSoldEachHourArray[i];
       let li = document.createElement('li');
       //Use the DOM to create the list
       li.textContent = `${hour[i]}: ${this.avgCookiesSoldEachHourArray[i]}`;
       ul.appendChild(li);
     }
-    // return this.avgCookiesSoldEachHourArray;
     let li = document.createElement('li');
     li.textContent = `Total: ${this.dailyTotal}`;
     ul.appendChild(li);
@@ -184,4 +193,4 @@ let lima = {
   }
 };
 
-lima.getRandomCustomers();
+lima.displayCookies();
