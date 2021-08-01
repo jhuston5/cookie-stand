@@ -1,4 +1,4 @@
-# LAB - 06
+# LAB - 07
 
 ## cookie-stand
 
@@ -14,4 +14,5 @@ Create a business website with two pages - a home page with contact information 
 
 ### Reflections and Comments
 
-DOM Manipulation still has a ways to go, but at least I was able to display the information appropriately on my page.
+At the beginning I felt very confident in how this was going to go. I was visualizing different steps I needed to take in my mind, and most of it was conceptually correct. 
+However, adding a few things like the totals at the ends was the hardest part and took the most time. Because things had already become fairly complex, adding in those last layers really stretched me.
