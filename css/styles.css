@@ -22,7 +22,7 @@ header {
   left: 0;
   right: 0;
 }
-
+/* 
 ul {
   margin-left: 2rem;
   margin-top: 1rem;
@@ -34,7 +34,7 @@ ul {
 
 li:last-child, h3 {
   font-weight: bold;
-}
+} */
 
 nav {
   width: 10vw;
@@ -47,4 +47,21 @@ img {
   height: 6rem;
   border: solid;
   border-radius: 10px;
+}
+
+table, td, th {
+  border: 1px solid rgb(112, 159, 165);
+}
+table {
+  margin: 1rem;
+}
+td, th {
+  padding: 1rem;
+}
+th {
+  font-weight: bold;
+  background-color: lightcyan;
+}
+tfoot {
+  background-color: rgba(112, 159, 165, .1);
 }
