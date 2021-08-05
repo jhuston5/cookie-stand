@@ -1,6 +1,5 @@
 'use strict';
 
-
 // Create an array containing every hour the store is open
 let hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
@@ -102,49 +101,26 @@ renderAll();
 
 
 
-// Wrap this in a function, call this function in the render all after the for loop
+// NON-WORKING CODE FOR THEME BUTTONS
+// let changeHeader = document.querySelector('header');
+// let changeMain = document.querySelector('main');
+// let changeFooter = document.querySelector('footer');
 
-//WORKING CODE
-// let hourTotalRow = document.createElement('tr');
-// hourTotalRow.textContent = 'Total';
-// let grandtotal = 0;
-// for (let i = 0; i < hour.length; i++) {
-//   let hourTotal = 0;
-//   for (let j = 0; j < storeArray.length; j++) {
-//     hourTotal += storeArray[j].avgCookiesSoldEachHourArray[i];
-//   }
-//   let td = document.createElement('td');
-//   td.textContent = hourTotal;
-//   hourTotalRow.appendChild(td);
-//   grandtotal += hourTotal;
+// let salmonThemeBtn = document.querySelector('#salmon-btn');
+
+// function setCookieTheme() {
+//   changeMain.classList.add('.cookie-theme');
+//   changeHeader.classList.remove('.cookie-theme');
+//   changeFooter.classList.remove('.cookie-theme');
 // }
-// let grandTotalId = document.createElement('td');
-// grandTotalId.textContent = grandtotal;
-// hourTotalRow.appendChild(grandTotalId);
 
-// storeTable.appendChild(hourTotalRow);
-//END WORKING CODE
+// let cookieThemeBtn = document.querySelector('#cookie-btn');
 
-
-// let totalTh = document.createElement('th');
-// totalTh.textContent = 'Daily Location Total';
-// tr.appendChild(totalTh);
-// for (let i = 0; i < storeArray.length; i++) {
-//   let dailyTotal = 0;
-//   for (let j = 0; j < hour.length; j++) {
-//     dailyTotal += storeArray[i].avgCookiesSoldEachHourArray[j];
-//   }
-//   let dailyTotalRow = document.createElement('tr');
-//   dailyTotalRow.textContent = dailyTotal;
-//   totalTh.appendChild(dailyTotalRow);
+// function setSalmonTheme() {
+//   changeMain.classList.remove('cookie-theme');
+//   changeHeader.classList.add('cookie-theme');
+//   changeFooter.classList.add('cookie-theme');
 // }
-// storeTable.appendChild(dailyTotalRow);
 
-
-// this.addTotalCookiesPurchased = function() {
-//   let totalCookies = 0;
-//   for (let i = 0; i < this.avgCookiesSoldEachHourArray.length; i++) {
-//     totalCookies += this.avgCookiesSoldEachHourArray[i];
-//   }
-//   this.avgCookiesSoldEachHourArray.push(totalCookies);
-// };
+// salmonThemeBtn.addEventListener('click', setSalmonTheme);
+// cookieThemeBtn.addEventListener('click', setCookieTheme);
