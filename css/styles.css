@@ -92,11 +92,11 @@ tfoot {
 }
 
 main {
-  margin: 30px auto;
+  margin: 15px auto;
   width: 960px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  /* flex-wrap: nowrap; */
+  /* justify-content: space-between; */
 }
 
 footer {
@@ -111,6 +111,7 @@ footer div {
   width: 100%;
   margin-bottom: 0;
   margin-top: 50px;
+  top: 10;
   bottom: 0;
   font-family: Cambria, Cochin, Georgia, serif;
   display: flex;
@@ -124,7 +125,9 @@ button {
 }
 
 article {
-  padding: 1rem;
+  padding: .25rem;
+  width: 300px;
+  /* display: flex; */
 }
 
 h5 {
@@ -147,7 +150,10 @@ section img {
   padding: 1rem;
 }
 
-
+article img {
+  width: 250px;
+  max-width: 100%;
+}
 
 .cookie-theme {
   background-color: #F2D0A4;
