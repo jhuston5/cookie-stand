@@ -71,6 +71,7 @@ table, td, th {
 }
 table {
   margin: 1rem;
+  max-width: 50%;
 }
 
 tr {
@@ -88,14 +89,18 @@ th {
 }
 tfoot {
   background-color: rgba(112, 159, 165, .1);
-  color:darkolivegreen;
+  color:darkolivegreen
+}
+tfoot > td {
+  background-color: rgba(112, 159, 165, .1);
+  color: darkolivegreen;
 }
 
 main {
   margin: 15px auto;
   width: 960px;
   display: flex;
-  /* flex-wrap: nowrap; */
+  flex-wrap: wrap;
   /* justify-content: space-between; */
 }
 
@@ -122,6 +127,7 @@ footer div {
 
 button {
   justify-content: flex-end;
+  max-width: 5rem;
 }
 
 article {
@@ -145,7 +151,7 @@ article li {
 section img {
   width: 15rem;
   height: 10rem;
-  max-width: 50%;
+  max-width: 75%;
   background-color: lightsalmon;
   padding: 1rem;
 }
@@ -157,4 +163,18 @@ article img {
 
 .cookie-theme {
   background-color: #F2D0A4;
+}
+/* 
+#locations {
+  max-width: 50%;
+  display: inline-block;
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; */
+
+form {
+  max-width: 25%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
