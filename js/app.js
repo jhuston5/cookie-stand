@@ -5,25 +5,32 @@ let hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3
 
 let storeArray =[];
 
+
 // Create a DOM container element for the table content
 const storeTable = document.querySelector('table');
-let tr = document.createElement('tr');
-let th = document.createElement('th');
-th.textContent = 'Store';
-tr.appendChild(th);
-storeTable.appendChild(tr);
+let tableBody = document.querySelector('tbody');
+let tableHead = document.querySelector('thead');
+let hoursRows = document.createElement('tr');
+let hoursTitle = document.createElement('th');
+
+hoursTitle.textContent = 'Store';
+hoursRows.appendChild(hoursTitle);
+tableHead.appendChild(hoursRows);
+
+let hourTotalRow = document.querySelector('tfoot');
 
 // Iterate and display every hour the store is open
 for (let i = 0; i < hour.length; i++) {
   let th = document.createElement('th');
   th.textContent = hour[i];
-  tr.appendChild(th);
+  hoursRows.appendChild(th);
+  tableHead.appendChild(hoursRows);
 }
 
 let th2 = document.createElement('th');
 th2.textContent = 'Daily Location Total';
-tr.appendChild(th2);
-storeTable.appendChild(tr);
+hoursRows.appendChild(th2);
+
 
 
 function Store(name, min, max, avg){
@@ -53,8 +60,10 @@ function Store(name, min, max, avg){
   // Method that displays a table of the data created and pushed to the avgCookiesSoldEachHourArray
   this.renderTable = function() {
     let tr = document.createElement('tr');
-    tr.textContent = `${this.name}`;
-    storeTable.appendChild(tr);
+    let locationName = document.createElement('th');
+    locationName.textContent = `${this.name}`;
+    tr.appendChild(locationName);
+    tableBody.appendChild(tr);
     this.createCookiesPurchasedArray();
     for (let i = 0; i < hour.length; i++) {
       let td = document.createElement('td');
@@ -64,6 +73,7 @@ function Store(name, min, max, avg){
     let totalTd = document.createElement('td');
     totalTd.textContent = this.dailyTotal;
     tr.appendChild(totalTd);
+    tableBody.appendChild(tr);
   };
   // Push every new object into a container array
   storeArray.push(this);
@@ -78,7 +88,7 @@ let lima = new Store('Lima', 2, 16, 4.6);
 
 // Create a function that displays row and column totals
 function grandTotals () {
-  let hourTotalRow = document.createElement('tfoot');
+  // let hourTotalRow = document.createElement('tfoot');
   hourTotalRow.textContent = 'Total';
   let grandTotal = 0;
   for (let i = 0; i < hour.length; i++) {
@@ -104,11 +114,38 @@ function renderAll () {
   for (let i = 0; i < storeArray.length; i++) {
     storeArray[i].renderTable();
   }
-  grandTotals();
+  // grandTotals();
 }
 
 
 renderAll();
+grandTotals();
+
+
+// Create container element accessing the form id
+let formContainer = document.getElementById('locations');
+function handleSubmit(event) {
+  event.preventDefault();
+  let storeLocation = event.target.storeLocation.value;
+  let minCustomers = parseInt(event.target.minCustomers.value);
+  let maxCustomers = parseInt(event.target.maxCustomers.value);
+  let avgCookies = parseInt(event.target.avgCookies.value);
+  console.log(storeLocation,minCustomers, maxCustomers, avgCookies);
+  let newStore = new Store(
+    storeLocation,
+    minCustomers,
+    maxCustomers,
+    avgCookies
+  );
+  tableBody.innerHTML = '';
+  hourTotalRow.innerHTML = '';
+  renderAll();
+  grandTotals();
+}
+formContainer.addEventListener('submit', handleSubmit);
+
+
+
 
 
 
