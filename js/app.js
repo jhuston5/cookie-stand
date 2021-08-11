@@ -124,6 +124,7 @@ grandTotals();
 
 // Create container element accessing the form id
 let formContainer = document.getElementById('locations');
+
 function handleSubmit(event) {
   event.preventDefault();
   let storeLocation = event.target.storeLocation.value;
@@ -131,12 +132,14 @@ function handleSubmit(event) {
   let maxCustomers = parseInt(event.target.maxCustomers.value);
   let avgCookies = parseInt(event.target.avgCookies.value);
   console.log(storeLocation,minCustomers, maxCustomers, avgCookies);
+
   let newStore = new Store(
     storeLocation,
     minCustomers,
     maxCustomers,
     avgCookies
   );
+
   tableBody.innerHTML = '';
   hourTotalRow.innerHTML = '';
   renderAll();
