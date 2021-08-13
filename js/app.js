@@ -151,27 +151,3 @@ formContainer.addEventListener('submit', handleSubmit);
 
 
 
-
-// NON-WORKING CODE FOR THEME BUTTONS
-// let changeHeader = document.querySelector('header');
-// let changeMain = document.querySelector('main');
-// let changeFooter = document.querySelector('footer');
-
-// let salmonThemeBtn = document.querySelector('#salmon-btn');
-
-// function setCookieTheme() {
-//   changeMain.classList.add('.cookie-theme');
-//   changeHeader.classList.remove('.cookie-theme');
-//   changeFooter.classList.remove('.cookie-theme');
-// }
-
-// let cookieThemeBtn = document.querySelector('#cookie-btn');
-
-// function setSalmonTheme() {
-//   changeMain.classList.remove('cookie-theme');
-//   changeHeader.classList.add('cookie-theme');
-//   changeFooter.classList.add('cookie-theme');
-// }
-
-// salmonThemeBtn.addEventListener('click', setSalmonTheme);
-// cookieThemeBtn.addEventListener('click', setCookieTheme);

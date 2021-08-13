@@ -128,6 +128,7 @@ footer {
   bottom: 0;
   width: 100%;
   height: 50px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 button {
@@ -138,7 +139,6 @@ button {
 article {
   padding: .25rem;
   width: 300px;
-  /* display: flex; */
 }
 
 h5 {
@@ -166,16 +166,6 @@ article img {
   max-width: 100%;
 }
 
-.cookie-theme {
-  background-color: #F2D0A4;
-}
-/* 
-#locations {
-  max-width: 50%;
-  display: inline-block;
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; */
 
 form {
   max-width: 25%;
