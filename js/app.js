@@ -6,6 +6,7 @@ let hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3
 let storeArray =[];
 
 
+
 // Create a DOM container element for the table content
 const storeTable = document.querySelector('table');
 let tableBody = document.querySelector('tbody');
